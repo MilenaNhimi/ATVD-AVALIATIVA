@@ -1,0 +1,25 @@
+public class ValidarNota {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    double nota;
+    System.out.println("Por favor, insira uma nota entre zero e dez:");
+    while (true) {
+      if (scanner.hasNextDouble()) {
+        nota = scanner.nextDouble();
+
+          if (nota >= 0 && nota <=10) {
+            System.out.println("Nota válida: " + nota);
+            break;
+       } else {
+          System.out.println("Valor inválido! A nota deve estar entre zero e dez.");
+          System.out.println("Por favor, insira um número válido:");
+      }
+  } else {
+     System.out.println("Entrada inválida! Por favor, insira um número válido: ");
+     scanner.next();
+  } 
+    }
+
+    scanner.close();
+  }
+}
